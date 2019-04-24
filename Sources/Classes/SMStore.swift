@@ -913,7 +913,14 @@ open class SMStore: NSIncrementalStore {
     // MARK:- Request handlers
     
     func executeInResponseToFetchRequest(_ fetchRequest:NSFetchRequest<NSFetchRequestResult>,context:NSManagedObjectContext) throws ->[Any] {
-        let resultsFromLocalStore = try self.backingMOC.fetch(fetchRequest)
+        
+        let newFetchRequest = fetchRequest.copy(with: nil) as! NSFetchRequest<NSFetchRequestResult>
+        let entityName = newFetchRequest.entityName
+        let entities = backingMOC.persistentStoreCoordinator?.managedObjectModel.entitiesByName
+        let entity = entities![entityName!]
+        newFetchRequest.entity = entity
+        
+        let resultsFromLocalStore = try self.backingMOC.fetch(newFetchRequest)
         if !resultsFromLocalStore.isEmpty {
             switch fetchRequest.resultType {
             case .managedObjectResultType:
