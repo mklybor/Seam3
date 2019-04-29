@@ -76,7 +76,7 @@ class DetailViewController: UIViewController {
             
             if detail.hasChanges {
                 do {
-                    print("moc= \(String(describing: self.managedObjectContext))")
+                    print("moc= \(String(describing: self.managedObjectContext)) has changes")
                     try self.managedObjectContext.save()
                 } catch {
                     print("Error saving: \(error)")

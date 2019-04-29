@@ -631,6 +631,7 @@ open class SMStore: NSIncrementalStore {
         }
         
         let defaults = UserDefaults.standard
+        //print ("Defaults: \(defaults)")
         
         if defaults.bool(forKey: SMStore.SMStoreCloudStoreCustomZoneName) == false || defaults.bool(forKey: SMStore.SMStoreCloudStoreSubscriptionName) == false {
             

@@ -11,6 +11,7 @@ import Seam3
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    static let syncDelayTime = 30.0 //seconds between sync attempts
 
     var smStore: SMStore?
 
@@ -194,7 +195,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
             let url = self.applicationDocumentsDirectory.appendingPathComponent("Seam3Demo.storedata")
             do {
-                let options:[String:Any] = [SMStore.SMStoreContainerOption:"iCloud.org.cocoapods.demo.Seam3-Example"]
+                let options:[String:Any] = [SMStore.SMStoreContainerOption:"icloud.MichaelKlybor.Seam3.Example"]
                 self.smStore = try coordinator!.addPersistentStore(ofType: SMStore.type, configurationName: nil, at: url, options: options) as? SMStore
             } catch {
                 // Replace this implementation with code to handle the error appropriately.

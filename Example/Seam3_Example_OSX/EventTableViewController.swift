@@ -35,8 +35,11 @@ class EventTableViewController: NSViewController {
         NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: SMStoreNotification.SyncDidFinish), object: nil, queue: nil) { notification in
             
             if notification.userInfo != nil {
-                let appDelegate = NSApplication.shared.delegate as! AppDelegate
-                appDelegate.smStore?.triggerSync(complete: true)
+                _ = Timer.scheduledTimer(withTimeInterval: AppDelegate.syncDelayTime, repeats: false) {
+                    (timer) in
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.smStore?.triggerSync(complete: true)
+                }
             }
             
             self.managedObjectContext?.refreshAllObjects()

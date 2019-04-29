@@ -269,15 +269,19 @@
 				LastUpgradeCheck = 1020;
 				TargetAttributes = {
 					682CE146213C188C0006C2C7 = {
+						DevelopmentTeam = 95V7Z82R4F;
 						ProvisioningStyle = Automatic;
 					};
 					682CE15D213C18EC0006C2C7 = {
+						DevelopmentTeam = 95V7Z82R4F;
 						ProvisioningStyle = Automatic;
 					};
 					68DB9AC4213B9779002E35C3 = {
+						DevelopmentTeam = 95V7Z82R4F;
 						ProvisioningStyle = Automatic;
 					};
 					C1E7E7C11FF8F1BA00F44A5A = {
+						DevelopmentTeam = 95V7Z82R4F;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
@@ -400,11 +404,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.5.3;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 95V7Z82R4F;
 				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Assets/Resources/macOS/Seam3-macOS Info.plist";
@@ -433,7 +437,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.5.3;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 95V7Z82R4F;
 				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Assets/Resources/macOS/Seam3-macOS Info.plist";
@@ -458,11 +462,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.5.3;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 95V7Z82R4F;
 				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Assets/Resources/tvOS/Seam3-tvOS Info.plist";
@@ -491,7 +495,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.5.3;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 95V7Z82R4F;
 				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Assets/Resources/tvOS/Seam3-tvOS Info.plist";
@@ -516,11 +520,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.5.3;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 95V7Z82R4F;
 				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Assets/Resources/watchOS/Seam3-watchOS Info.plist";
@@ -548,7 +552,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.5.3;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 95V7Z82R4F;
 				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Assets/Resources/watchOS/Seam3-watchOS Info.plist";
@@ -572,11 +576,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.5.3;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 95V7Z82R4F;
 				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Assets/Resources/iOS/Seam3-iOS Info.plist";
@@ -603,7 +607,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.5.3;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 95V7Z82R4F;
 				ENABLE_TESTABILITY = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Assets/Resources/iOS/Seam3-iOS Info.plist";

@@ -41,6 +41,8 @@ class SMServerStoreSetupOperation:Operation {
     }
     
     override func main() {
+        let zoneName = SMStore.SMStoreCloudStoreCustomZoneName
+        print ("Zone name: \(zoneName)")
         let operationQueue = OperationQueue()
         let zone = CKRecordZone(zoneName: SMStore.SMStoreCloudStoreCustomZoneName)
         var error: Error?
@@ -59,7 +61,9 @@ class SMServerStoreSetupOperation:Operation {
         }
         fetchRecordZonesOperation.database = self.database
         
-        fetchRecordZonesOperation.fetchRecordZonesCompletionBlock = ({(zones,operationError) -> Void in
+        fetchRecordZonesOperation.fetchRecordZonesCompletionBlock = (
+        {
+            (zones,operationError) -> Void in
             
             error = operationError
             var ckError = operationError as? CKError
@@ -145,7 +149,13 @@ class SMServerStoreSetupOperation:Operation {
         #endif
         
         if let completionBlock = self.setupOperationCompletionBlock {
-            completionBlock(customZoneCreated,subscriptionCreated,error)
+            var ckError = error as? CKError
+            
+            if ckError?.partialErrorsByItemID != nil {
+                ckError = ckError?.partialErrorsByItemID?.values.first as? CKError
+            }
+
+            completionBlock(customZoneCreated,subscriptionCreated,ckError)
         }
     }
 }

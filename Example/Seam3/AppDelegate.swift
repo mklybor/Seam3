@@ -35,12 +35,13 @@ import Seam3
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
-    
+    static let syncDelayTime = 30.0 //seconds between sync attempts
+
     var window: UIWindow?
     
     var smStore: SMStore?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let splitViewController = self.window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
@@ -186,7 +187,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             fetchedDevice = NSEntityDescription.insertNewObject(forEntityName: "Device", into: moc) as? Device
             fetchedDevice!.deviceID = deviceID
             let 🐱 = #imageLiteral(resourceName: "kitten")
-            if let data = UIImageJPEGRepresentation(🐱, 0.5) {
+            if let data = 🐱.jpegData(compressionQuality: 0.5) {
                 fetchedDevice!.image = data 
             }
             do {
@@ -241,7 +242,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
             
             storeDescription.type = SMStore.type
             
-            storeDescription.setOption("iCloud.org.cocoapods.demo.Seam3-Example" as NSString, forKey: SMStore.SMStoreContainerOption)
+            //storeDescription.setOption("icloud.MichaelKlybor.Seam3.Example" as NSString, forKey: SMStore.SMStoreContainerOption)
             
             // Uncomment next line for "client wins" conflict resolution policy
             //storeDescription.setOption(NSNumber(value:SMSyncConflictResolutionPolicy.clientRecordWins.rawValue), forKey:SMStore.SMStoreSyncConflictResolutionPolicyOption)

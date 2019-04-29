@@ -128,7 +128,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             storeDescription.type = SMStore.type
             
-            storeDescription.setOption("iCloud.org.cocoapods.demo.Seam3-Example" as NSString, forKey: SMStore.SMStoreContainerOption)
+            storeDescription.setOption("icloud.MichaelKlybor.Seam3.Example" as NSString, forKey: SMStore.SMStoreContainerOption)
             
             // Uncomment next line for "client wins" conflict resolution policy
             //         storeDescription.setOption(NSNumber(value:SMSyncConflictResolutionPolicy.clientRecordWins.rawValue), forKey:SMStore.SMStoreSyncConflictResolutionPolicyOption)

@@ -60,8 +60,18 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         NotificationCenter.default.addObserver(forName: Notification.Name(rawValue: SMStoreNotification.SyncDidFinish), object: nil, queue: nil) { notification in
             
             if notification.userInfo != nil {
+                //do this after a time delay, else we get into an constant series of syncs
+                /*(*******
+                _ = Timer.scheduledTimer(withTimeInterval: AppDelegate.syncDelayTime, repeats: false) {
+                    (timer) in
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.smStore?.triggerSync(complete: true)
+                }
+ *******/
+                //got rid of the timer idea to see if we really get a constant stream of syncs after the various container issues have been fixed
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
                 appDelegate.smStore?.triggerSync(complete: true)
+
             }
             
             self.managedObjectContext?.refreshAllObjects()
@@ -193,7 +203,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         return indexPath.section == 0
     }
 
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let context = self.managedObjectContext {
                 context.delete(self.events[indexPath.row])
